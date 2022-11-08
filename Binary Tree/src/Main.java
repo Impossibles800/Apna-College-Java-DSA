@@ -11,6 +11,7 @@ public class Main {
 //        System.out.println(Count_Nodes.count_nodes(root));
 //        System.out.println(Sum_of_nodes.sum(root));
 //        System.out.println(Diameter_of_tree.diameter(root));
-        System.out.println(Diameter_of_tree.diameter(root));
+//        System.out.println(Diameter_of_tree.diameter(root));
+
     }
 }
