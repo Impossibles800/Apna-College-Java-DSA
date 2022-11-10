@@ -1,12 +1,14 @@
 public class Build_Tree {
 
 
+
+
     public static class Node{
         int data;
         Node left;
         Node right;
 
-        public Node(int data) {
+        public Node(Node data) {
             this.data = data;
             this.left = left;
             this.right = right;
