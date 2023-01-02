@@ -1,7 +1,7 @@
 public class Tries {
     public static class Node{
         Node[] children = new Node[26];
-        boolean eof = false;
+        boolean eow = false;
 
         Node(){
             for (int i = 0; i <26; i++) {
@@ -18,7 +18,7 @@ public class Tries {
                 curr.children[idx] = new Node();
             curr = curr.children[idx];
         }
-        curr.eof=true;
+        curr.eow =true;
     }
     public static boolean search(String word){
         if (word == null)
@@ -30,7 +30,7 @@ public class Tries {
                 return false;
             curr = curr.children[idx];
         }
-        return curr.eof ==  true;
+        return curr.eow ==  true;
     }
 
     public static void main(String[] args) {
