@@ -16,13 +16,13 @@ public class Union {
         int parent_a = find(a);
         int parent_b=find(b);
 
-        if (rank[parent_a]>=rank[parent_b]){
+        if (rank[parent_a]==rank[parent_b]){
             par[parent_b] = parent_a;
             rank[parent_a]++;
-        }
-        else {
+        } else if (par[parent_a]>par[parent_b]) {
+            par[parent_b] = parent_a;
+        } else {
             par[parent_a] = parent_b;
-            rank[parent_b]++;
         }
     }
 
