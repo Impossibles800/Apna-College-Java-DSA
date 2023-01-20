@@ -13,7 +13,7 @@ public class Fractional_Knapsack {
 //        ascending order
         Arrays.sort(ratio, Comparator.comparingDouble(o -> o[1]));
         int final_value = 0;
-        for (int i = ratio.length; i >=0 ; i--) {
+        for (int i = ratio.length-1; i >=0 ; i--) {
             int idx = (int) ratio[i][0];
             int capacity = w;
 
