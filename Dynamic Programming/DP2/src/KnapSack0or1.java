@@ -31,6 +31,32 @@ public class KnapSack0or1 {
             return dp[i][W];
         }
     }
+    public static int tabulation(int wt[], int val[], int W){
+
+        int [][]dp = new int[val.length+1][W+1];
+        for (int i = 0; i < dp.length; i++) {
+            dp[i][0] = 0;
+        }
+        for (int j = 0; j < dp[0].length; j++) {
+            dp[0][j] = 0;
+        }
+        int n = val.length;
+        for (int i = 1; i < n+1 ; i++) {
+            for (int j = 1; j < W+1; j++) {
+                int v = val[i-1];
+                int w = wt[i-1];
+                if(w<=j){ //j = allowed weight
+                    int incProfit = v + dp[i-1][j-1];
+                    int exlProfit = dp[i-1][j];
+                    dp[i][j] = Math.max(incProfit, exlProfit);
+                }else{
+                    int exlProfit = dp[i-1][j];
+                    dp[i][j] = exlProfit;
+                }
+            }
+        }
+        return dp[n][W];
+    }
 
     public static void main(String[] args) {
         int W = 7;
@@ -44,5 +70,6 @@ public class KnapSack0or1 {
             }
         }
         System.out.println(memorization(wt,val,W,val.length,dp));
+        System.out.println(tabulation(wt, val, W));
     }
 }
