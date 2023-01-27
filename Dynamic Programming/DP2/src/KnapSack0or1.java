@@ -46,7 +46,7 @@ public class KnapSack0or1 {
                 int v = val[i-1];
                 int w = wt[i-1];
                 if(w<=j){ //j = allowed weight
-                    int incProfit = v + dp[i-1][j-1];
+                    int incProfit = v + dp[i-1][j-w];
                     int exlProfit = dp[i-1][j];
                     dp[i][j] = Math.max(incProfit, exlProfit);
                 }else{
