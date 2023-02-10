@@ -34,7 +34,7 @@ public class Wildcard_matching {
 
     public static void main(String[] args) {
         String s ="aa";
-        String p = "*";
+        String p = "*****a";
         System.out.println(wildcard_matching(s, p));
     }
 }
