@@ -19,8 +19,8 @@ public class Coin_Change {
     }
 
     public static void main(String[] args) {
-        int []coins = {1,2,3};
-        int sum = 4;
+        int []coins = {1,2,5};
+        int sum = 11;
         System.out.println(ways(coins, sum));
 
     }
