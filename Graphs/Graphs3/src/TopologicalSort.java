@@ -31,7 +31,7 @@ public class TopologicalSort {
             }
         }
     }
-    public static void helper(ArrayList<Edge>[]graph, int[] inDegree){
+    public static void helper(ArrayList<Edge>[]graph, int[] inDegree){ // used to calculate the indegree
         for (int i = 0; i < graph.length; i++) {
             int v = i;
             for (int j = 0; j < graph[v].size(); j++) {

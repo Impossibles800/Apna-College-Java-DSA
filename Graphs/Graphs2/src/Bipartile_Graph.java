@@ -28,6 +28,6 @@ public class Bipartile_Graph extends Graph{
                 }
             }
         }
-        return false;
+        return true ;
     }
 }
