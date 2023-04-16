@@ -35,4 +35,15 @@ public class Connecting_Cities {
         return final_cost;
     }
 
+    public static void main(String[] args) {
+        int[][] cities = {
+                {0, 1, 3, 0, 0},
+                {1, 0, 1, 3, 10},
+                {3, 1, 0, 1, 0},
+                {0, 3, 1, 0, 2},
+                {0, 10, 0, 2, 0}
+        };
+        System.out.println(cost(cities));
+    }
+
 }

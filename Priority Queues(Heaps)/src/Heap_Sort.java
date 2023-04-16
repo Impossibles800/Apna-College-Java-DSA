@@ -17,19 +17,35 @@ public class Heap_Sort {
         }
     }
     public static void heapify(int i, int size, int []a){
+//        int left = 2*i+1;
+//        int right = 2*i+2;
+//        int maxIdx = i;
+//
+//        if(left<size && a[left]>a[maxIdx])
+//            maxIdx = left;
+//        if(right<size && a[right]>a[maxIdx])
+//            maxIdx = right;
+//        if(maxIdx!=i){
+//            int temp = a[i];
+//            a[i] = a[maxIdx];
+//            a[maxIdx] = temp;
+//            heapify(maxIdx, size, a);
+//        }
+//
+//        Descending Order
         int left = 2*i+1;
         int right = 2*i+2;
-        int maxIdx = i;
+        int minIdx = i;
 
-        if(left<size && a[left]>maxIdx)
-            maxIdx = left;
-        if(right<size && a[right]>maxIdx)
-            maxIdx = right;
-        if(maxIdx!=i){
+        if(left<size && a[left]<a[minIdx])
+            minIdx = left;
+        if(right<size && a[right]<a[minIdx])
+            minIdx = right;
+        if(minIdx!=i){
             int temp = a[i];
-            a[i] = a[maxIdx];
-            a[maxIdx] = temp;
-            heapify(maxIdx, size, a);
+            a[i] = a[minIdx];
+            a[minIdx] = temp;
+            heapify(minIdx, size, a);
         }
     }
 

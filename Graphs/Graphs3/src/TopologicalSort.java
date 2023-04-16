@@ -40,4 +40,23 @@ public class TopologicalSort {
             }
         }
     }
+
+    public static void main(String[] args) {
+        int n = 7;
+        ArrayList<Edge>[] graph = new ArrayList[n];
+        for (int i = 0; i < n; i++) {
+            graph[i] = new ArrayList<>();
+        }
+        graph[0].add(new Edge(0,1));
+        graph[0].add(new Edge(0,2));
+        graph[1].add(new Edge(1,3));
+        graph[2].add(new Edge(2,3));
+        graph[2].add(new Edge(2,4));
+        graph[3].add(new Edge(3,5));
+        graph[4].add(new Edge(4,5));
+        graph[4].add(new Edge(4,6));
+        graph[5].add(new Edge(5,6));
+
+        topological_sort(graph);
+    }
 }

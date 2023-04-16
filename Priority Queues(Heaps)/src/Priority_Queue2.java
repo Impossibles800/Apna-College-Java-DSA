@@ -18,11 +18,11 @@ public class Priority_Queue2 {
 
     public static void main(String[] args) {
         PriorityQueue<Student> priorityQueue = new PriorityQueue<>(Comparator.reverseOrder());
-        priorityQueue.add(new Student("Aadityan", 1));
-        priorityQueue.add(new Student("Mayank", 10));
-        priorityQueue.add(new Student("Akshay", 13));
-        priorityQueue.add(new Student("Abhishek", 21));
-        priorityQueue.add(new Student("Raman", 17));
+        priorityQueue.add(new Student("Aadityan ", 1));
+        priorityQueue.add(new Student("Mayank ", 10));
+        priorityQueue.add(new Student("Akshay ", 13));
+        priorityQueue.add(new Student("Abhishek ", 21));
+        priorityQueue.add(new Student("Raman ", 17));
         while(!priorityQueue.isEmpty()){
             System.out.println(priorityQueue.peek().name + priorityQueue.peek().rank);
             priorityQueue.remove();

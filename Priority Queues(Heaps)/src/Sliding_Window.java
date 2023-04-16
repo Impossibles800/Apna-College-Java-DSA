@@ -19,6 +19,7 @@ public class Sliding_Window {
         int []res = new int[arr.length-k+1];
         PriorityQueue<Pair> pq = new PriorityQueue<>();
 
+//        Storing First window elements
         for (int i = 0; i < k; i++) {
             pq.add(new Pair(arr[i],i));
         }
