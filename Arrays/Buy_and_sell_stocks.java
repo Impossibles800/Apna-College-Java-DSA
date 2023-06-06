@@ -12,4 +12,7 @@ public class Buy_and_sell_stocks {
         }
         return max_profit;
     }
+    public static void main(String[] args) {
+        System.out.println(buy_and_sell(new int[]{7,1,5,3,6,4}));
+    }
 }
